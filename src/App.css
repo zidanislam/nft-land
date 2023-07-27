@@ -1,0 +1,10 @@
+.logo:hover {
+  filter: drop-shadow(0 0 2em #00ffea2a);
+}
+html {
+  --cursor-color: #00ffea;
+}
+
+html.dark-mode {
+  --cursor-color: #00ffea;
+}

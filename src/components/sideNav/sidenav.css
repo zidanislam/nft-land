@@ -1,0 +1,31 @@
+.nav-bar {
+  height: 100vh;
+  background-color: #151520;
+  margin: 0;
+  padding: 0;
+  overflow-y: scroll;
+  position: sticky;
+  top: 0;
+}
+.logo {
+  width: 80%;
+  padding: 10px;
+  display: block;
+  margin: auto;
+}
+.nav-item {
+  display: block;
+  margin-left: 30px;
+  text-align: start;
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+}
+.nav-item p {
+  color: grey;
+}
+.nav-item p:hover {
+  color: #00ffe8;
+}

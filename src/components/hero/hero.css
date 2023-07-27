@@ -1,0 +1,29 @@
+.heading {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 50px;
+  align-items: center;
+}
+.heading h3 {
+  font-size: 32px;
+}
+.heading p {
+  font-size: 16px;
+
+  margin-left: 50px;
+}
+.btn {
+  font-size: 16px;
+
+  margin-left: 50px;
+}
+.heading img {
+  width: 50%;
+  margin: auto;
+}
