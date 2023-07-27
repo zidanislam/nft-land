@@ -13,7 +13,13 @@
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
 }
-
+/* globel section heading style */
+.section-heading {
+  margin-left: 30px;
+  margin-bottom: 10px;
+  font-size: 32px;
+  font-weight: 700;
+}
 a {
   font-weight: 500;
   color: grey;
@@ -26,6 +32,9 @@ a:hover {
 body {
   margin: 0;
 }
+/* spinner animation */
+
+/* end of spinner animation */
 
 button {
   border-radius: 8px;

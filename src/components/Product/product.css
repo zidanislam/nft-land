@@ -38,3 +38,6 @@
   color: #00ffea;
   border: none;
 }
+.spinner-section {
+  display: flex;
+}
