@@ -1,7 +1,9 @@
+import { motion } from "framer-motion";
 import React, { useEffect, useState } from "react";
 import Product from "../Product/Product";
 import Filter from "../filter/Filter";
 import useProductApi from "../hooks/useProductApi";
+import "./products.css";
 
 const Products = () => {
   const [filtered, setFilterd] = useState([]);
@@ -21,20 +23,15 @@ const Products = () => {
   }, [activeItem, products]);
   return (
     <>
-      <div>
-        <h2>Explore All</h2>
-        <Filter
-          products={products}
-          activeItem={activeItem}
-          setActiveItem={setActiveItem}
-          setFilterd={setFilterd}
-        />
+      <div className="all-products">
+        <h2 className="section-heading">Explore All</h2>
+        <Filter activeItem={activeItem} setActiveItem={setActiveItem} />
       </div>
-      <div className="products">
+      <motion.div layout className="products">
         {filtered.map((product) => (
           <Product key={product.id} product={product} />
         ))}
-      </div>
+      </motion.div>
     </>
   );
 };

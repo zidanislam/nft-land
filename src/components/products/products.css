@@ -1,0 +1,15 @@
+.products {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  padding: 30px;
+}
+.all-products {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.active {
+  background-color: #00ffe8;
+  color: black;
+}
