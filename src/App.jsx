@@ -7,13 +7,13 @@ function App() {
   return (
     <>
       <AnimatedCursor
-        innerSize={8}
-        outerSize={35}
+        innerSize={6}
+        outerSize={25}
         innerScale={1}
         outerScale={1.7}
         outerAlpha={0}
         outerStyle={{
-          border: "3px solid var(--cursor-color)",
+          border: "2px solid var(--cursor-color)",
         }}
         innerStyle={{
           backgroundColor: "var(--cursor-color)",
