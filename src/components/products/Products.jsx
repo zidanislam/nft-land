@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import React, { useEffect, useState } from "react";
 import Product from "../Product/Product";
 import Filter from "../filter/Filter";
@@ -22,17 +22,19 @@ const Products = () => {
     }
   }, [activeItem, products]);
   return (
-    <>
+    <div id="toall">
       <div className="all-products">
         <h2 className="section-heading">Explore All</h2>
         <Filter activeItem={activeItem} setActiveItem={setActiveItem} />
       </div>
       <motion.div layout className="products">
-        {filtered.map((product) => (
-          <Product key={product.id} product={product} />
-        ))}
+        <AnimatePresence>
+          {filtered.map((product) => (
+            <Product key={product.id} product={product} />
+          ))}
+        </AnimatePresence>
       </motion.div>
-    </>
+    </div>
   );
 };
 

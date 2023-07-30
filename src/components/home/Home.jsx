@@ -1,5 +1,6 @@
 import React from "react";
 import Hero from "../hero/Hero";
+import Info from "../info/Info";
 import Live from "../live/Live";
 import Popular from "../popular/Popular";
 import Products from "../products/Products";
@@ -14,9 +15,10 @@ const Home = () => {
       </div>
       <div className="home-components">
         <Hero />
-        <Live id="tolive" />
+        <Live />
         <Popular />
         <Products />
+        <Info />
       </div>
     </div>
   );

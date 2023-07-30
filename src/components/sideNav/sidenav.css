@@ -13,19 +13,30 @@
   display: block;
   margin: auto;
 }
-.nav-item {
+.nav-items {
   display: block;
   margin-left: 30px;
+  margin-bottom: 0px;
   text-align: start;
   font-size: 18px;
   font-weight: 500;
   cursor: pointer;
   position: absolute;
-  top: 50%;
+  top: 40%;
 }
-.nav-item p {
+.nav-items {
   color: grey;
 }
-.nav-item p:hover {
+.nav-items :hover {
+  color: #00ffe8;
+}
+.nav-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.active-nav {
+  padding-left: 12px;
+  border-left: 3px solid #00ffe8;
   color: #00ffe8;
 }

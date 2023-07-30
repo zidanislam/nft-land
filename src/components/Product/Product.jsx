@@ -4,7 +4,13 @@ import "./product.css";
 const Product = ({ product }) => {
   const { name, price, image } = product;
   return (
-    <motion.div layout className="product-card">
+    <motion.div
+      animate={{ opacity: 1 }}
+      initial={{ opacity: 0 }}
+      exit={{ opacity: 0 }}
+      layout
+      className="product-card"
+    >
       <img className="product-img" src={image} alt="" />
       <h2 className="product-name">{name}</h2>
       <h4 className="product-price">{price}</h4>

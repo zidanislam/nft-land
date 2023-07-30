@@ -15,22 +15,25 @@ const Hero = () => {
     position: "relative",
   };
   return (
-    <div  id="tohero" style={myStyle}>
-      <div className="heading">
-        <div>
-          <p>
-            The term fungible means something that can be replaced by something
-            similar. So, by the name Non Fungible Tokens, we can easily
-            understand.
-          </p>
-          <LinkScroll to="toall" smooth={true} duration={500}>
-            <button className="btn">Shop Now</button>
-          </LinkScroll>
+    <>
+    
+      <div id="tohero" style={myStyle}>
+        <div className="heading">
+          <div>
+            <p>
+              The term fungible means something that can be replaced by
+              something similar. So, by the name Non Fungible Tokens, we can
+              easily understand.
+            </p>
+            <LinkScroll to="toall" smooth={true} duration={500}>
+              <button className="btn">Shop Now</button>
+            </LinkScroll>
+          </div>
+          <h3>Discover Rare Digital art & collect NFT&apos;s</h3>
+          <img src="https://i.imgur.com/9YMTvk8.png" alt="" />
         </div>
-        <h3>Discover Rare Digital art & collect NFT's</h3>
-        <img src="https://i.imgur.com/9YMTvk8.png" alt="" />
       </div>
-    </div>
+    </>
   );
 };
 
