@@ -1,11 +1,14 @@
 .nav-bar {
   height: 100vh;
+  width: 250px;
   background-color: #151520;
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
   overflow-y: scroll;
   position: sticky;
   top: 0;
+  z-index: 1;
 }
 .logo {
   width: 80%;
@@ -35,8 +38,23 @@
   align-items: center;
   gap: 15px;
 }
-.active-nav {
-  padding-left: 12px;
-  border-left: 3px solid #00ffe8;
+.selected {
   color: #00ffe8;
+}
+.arrow {
+  display: none;
+}
+.mobile-menu {
+  display: none;
+}
+@media (max-width: 768px) {
+  .nav-bar {
+    position: fixed;
+  }
+  .arrow {
+    display: block;
+  }
+  .mobile-menu {
+    display: block;
+  }
 }

@@ -1,3 +1,6 @@
+import { faMessage } from "@fortawesome/free-regular-svg-icons";
+import { faMagnifyingGlass, faPhone } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 import { Link as LinkScroll } from "react-scroll";
 import "./hero.css";
@@ -16,7 +19,16 @@ const Hero = () => {
   };
   return (
     <>
-    
+      <div className="header">
+        <div className="header-item">
+          <input type="search" />
+          <FontAwesomeIcon icon={faMagnifyingGlass} size="lg" />
+        </div>
+        <div className="header-item">
+          <FontAwesomeIcon size="xl" icon={faPhone} />
+          <FontAwesomeIcon size="xl" icon={faMessage} />
+        </div>
+      </div>
       <div id="tohero" style={myStyle}>
         <div className="heading">
           <div>

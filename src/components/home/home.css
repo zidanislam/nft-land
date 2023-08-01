@@ -1,6 +1,8 @@
 .home-container {
-  display: grid;
-  grid-template-columns: 1fr 4fr;
+  display: flex;
   margin: 0;
   padding: 0;
+}
+.home-components {
+  width: 100%;
 }
