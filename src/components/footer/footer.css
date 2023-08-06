@@ -1,0 +1,19 @@
+.footer {
+  display: grid;
+  background-color: #151520;
+  text-align: center;
+  margin: auto;
+  justify-items: center;
+  align-items: center;
+  height: 40vh;
+  margin-top: 50px;
+  border-top: 1px solid rgba(169, 169, 169, 0.178);
+}
+.footer img {
+  width: 17%;
+}
+@media (max-width: 425px) {
+  .footer img {
+    width: 40%;
+  }
+}

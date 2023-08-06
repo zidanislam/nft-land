@@ -1,4 +1,5 @@
 import React from "react";
+import Footer from "../footer/Footer";
 import Hero from "../hero/Hero";
 import useNavState from "../hooks/useNavState";
 import Info from "../info/Info";
@@ -21,6 +22,7 @@ const Home = () => {
         <Popular />
         <Products />
         <Info />
+        <Footer />
       </div>
     </div>
   );
