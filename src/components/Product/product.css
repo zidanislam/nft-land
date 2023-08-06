@@ -32,7 +32,7 @@
   color: #00ffea;
 }
 .product-btn :hover {
-  background-color: white;
+  background-color: transparent;
   color: #00ffea;
   border: none;
 }

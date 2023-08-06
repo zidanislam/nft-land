@@ -2,15 +2,15 @@ import React from "react";
 
 const Filter = ({ setActiveItem, activeItem }) => {
   return (
-    <div className="filter-button">
-      <button
-        className={activeItem === "all" ? "active" : ""}
+    <div className="filter-buttons">
+      <button 
+        className={activeItem === "all" ? "active filter-btn" : "filter-btn"}
         onClick={() => setActiveItem("all")}
       >
         All
       </button>
       <button
-        className={activeItem === "Art" ? "active" : ""}
+        className={activeItem === "Art" ? "active filter-btn" : "filter-btn"}
         onClick={() => {
           setActiveItem("Art");
         }}
@@ -18,7 +18,7 @@ const Filter = ({ setActiveItem, activeItem }) => {
         Art
       </button>
       <button
-        className={activeItem === "Video" ? "active" : ""}
+        className={activeItem === "Video" ? "active filter-btn" : "filter-btn"}
         onClick={() => {
           setActiveItem("Video");
         }}
@@ -26,7 +26,7 @@ const Filter = ({ setActiveItem, activeItem }) => {
         Video
       </button>
       <button
-        className={activeItem === "AI" ? "active" : ""}
+        className={activeItem === "AI" ? "active filter-btn" : "filter-btn"}
         onClick={() => setActiveItem("AI")}
       >
         AI
