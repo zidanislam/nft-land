@@ -1,5 +1,6 @@
 import React from "react";
 import Hero from "../hero/Hero";
+import useNavState from "../hooks/useNavState";
 import Info from "../info/Info";
 import Live from "../live/Live";
 import Popular from "../popular/Popular";
@@ -8,13 +9,14 @@ import SideNav from "../sideNav/SideNav";
 import "./home.css";
 
 const Home = () => {
+  const navState = useNavState();
   return (
     <div className="home-container">
       <div className="bar">
-        <SideNav />
+        <SideNav navState={navState} />
       </div>
       <div className="home-components">
-        <Hero />
+        <Hero navState={navState} />
         <Live />
         <Popular />
         <Products />

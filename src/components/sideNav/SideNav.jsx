@@ -1,5 +1,4 @@
 import {
-  faBars,
   faCubesStacked,
   faFireFlameCurved,
   faHeartPulse,
@@ -9,43 +8,13 @@ import {
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { motion } from "framer-motion";
 import React, { useState } from "react";
-import { useMediaQuery } from "react-responsive";
 import { Link as LinkScroll } from "react-scroll";
 import logo from "../../images/logo.png";
 import "./sidenav.css";
 
-const SideNav = () => {
+const SideNav = ({ navState }) => {
   const [selected, setSelected] = useState("");
-  let isTab = useMediaQuery({ query: "(max-width:768px)" });
-  const [open, setOpen] = useState(isTab ? false : true);
-  const Sidenav_animation = isTab
-    ? {
-        open: {
-          x: 0,
-          width: "200px",
-          fontSize: "16px",
-          transition: {
-            damping: 40,
-          },
-        },
-        closed: {
-          x: -250,
-          width: "0px",
-          transition: {
-            damping: 40,
-            delay: 0.15,
-          },
-        },
-      }
-    : {
-        open: {
-          width: "250px",
-          fontSize: "18px",
-          transition: {
-            damping: 40,
-          },
-        },
-      };
+  const { Sidenav_animation, open, setOpen } = navState;
   return (
     <>
       <motion.div
@@ -139,9 +108,10 @@ const SideNav = () => {
           </LinkScroll>
         </div>
       </motion.div>
-      <div className="mobile-menu" onClick={() => setOpen(true)}>
-        <FontAwesomeIcon icon={faBars} size="xl" />
-      </div>
+      <div
+        onClick={() => setOpen(false)}
+        className={open ? "overlay show" : "overlay hide"}
+      ></div>
     </>
   );
 };

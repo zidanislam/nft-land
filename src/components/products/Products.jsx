@@ -23,7 +23,7 @@ const Products = () => {
   }, [activeItem, products]);
   return (
     <div id="toall">
-      <div className="all-products">
+      <div className="filter-products">
         <h2 className="section-heading">Explore All</h2>
         <Filter activeItem={activeItem} setActiveItem={setActiveItem} />
       </div>

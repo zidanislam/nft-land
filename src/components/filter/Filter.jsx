@@ -2,7 +2,7 @@ import React from "react";
 
 const Filter = ({ setActiveItem, activeItem }) => {
   return (
-    <div>
+    <div className="filter-button">
       <button
         className={activeItem === "all" ? "active" : ""}
         onClick={() => setActiveItem("all")}

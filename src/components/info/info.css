@@ -1,8 +1,9 @@
 .info-section {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  margin: 35px;
-  grid-column-gap: 3rem;
+  margin-left: 10px;
+  margin-right: 10px;
+  gap: 2rem;
   margin-top: 70px;
 }
 .info {
@@ -12,7 +13,7 @@
   height: 300px;
   color: darkgray;
   background: rgba(255, 255, 255, 0.027);
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.11);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.11);
   backdrop-filter: blur(5.3px);
   -webkit-backdrop-filter: blur(5.3px);
 }
