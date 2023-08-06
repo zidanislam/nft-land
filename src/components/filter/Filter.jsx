@@ -4,13 +4,13 @@ const Filter = ({ setActiveItem, activeItem }) => {
   return (
     <div className="filter-buttons">
       <button 
-        className={activeItem === "all" ? "active filter-btn" : "filter-btn"}
+        className={activeItem === "all" ? "active-filter filter-btn" : "filter-btn"}
         onClick={() => setActiveItem("all")}
       >
         All
       </button>
       <button
-        className={activeItem === "Art" ? "active filter-btn" : "filter-btn"}
+        className={activeItem === "Art" ? "active-filter filter-btn" : "filter-btn"}
         onClick={() => {
           setActiveItem("Art");
         }}
@@ -18,7 +18,7 @@ const Filter = ({ setActiveItem, activeItem }) => {
         Art
       </button>
       <button
-        className={activeItem === "Video" ? "active filter-btn" : "filter-btn"}
+        className={activeItem === "Video" ? "active-filter filter-btn" : "filter-btn"}
         onClick={() => {
           setActiveItem("Video");
         }}
@@ -26,7 +26,7 @@ const Filter = ({ setActiveItem, activeItem }) => {
         Video
       </button>
       <button
-        className={activeItem === "AI" ? "active filter-btn" : "filter-btn"}
+        className={activeItem === "AI" ? "active-filter filter-btn" : "filter-btn"}
         onClick={() => setActiveItem("AI")}
       >
         AI
