@@ -26,8 +26,6 @@
   cursor: pointer;
   position: absolute;
   top: 40%;
-}
-.nav-items {
   color: grey;
 }
 .nav-items :hover {
@@ -38,8 +36,9 @@
   align-items: center;
   gap: 15px;
 }
-.selected {
+.active {
   color: #00ffe8;
+  background-color: transparent;
 }
 .mobile-menu {
   display: none;

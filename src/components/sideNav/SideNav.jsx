@@ -40,7 +40,8 @@ const SideNav = ({ navState }) => {
             }}
             to="tohero"
             smooth={true}
-            offset={-30}
+            spy={true}
+            offset={-50}
             duration={500}
           >
             <FontAwesomeIcon icon={faHouseChimney} />
@@ -53,8 +54,9 @@ const SideNav = ({ navState }) => {
               setOpen(false);
             }}
             to="tolive"
+            spy={true}
             smooth={true}
-            offset={-30}
+            offset={-50}
             duration={500}
           >
             <FontAwesomeIcon icon={faHeartPulse} />
@@ -69,8 +71,9 @@ const SideNav = ({ navState }) => {
               setOpen(false);
             }}
             to="topopular"
+            spy={true}
             smooth={true}
-            offset={-30}
+            offset={-50}
             duration={500}
           >
             <FontAwesomeIcon icon={faFireFlameCurved} />
@@ -85,8 +88,9 @@ const SideNav = ({ navState }) => {
               setOpen(false);
             }}
             to="toall"
+            spy={true}
             smooth={true}
-            offset={-30}
+            offset={-50}
             duration={500}
           >
             <FontAwesomeIcon icon={faCubesStacked} />
@@ -99,8 +103,9 @@ const SideNav = ({ navState }) => {
               setOpen(false);
             }}
             to="toinfo"
+            spy={true}
             smooth={true}
-            offset={-30}
+            offset={-50}
             duration={500}
           >
             <FontAwesomeIcon icon={faLightbulb} />
