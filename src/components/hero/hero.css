@@ -136,6 +136,9 @@ btn:hover {
     width: 65%;
     height: 40px;
   }
+  .search-icon {
+    font-size: 24.5px;
+  }
   .search::placeholder {
     color: white;
     font-size: 12px;
@@ -186,12 +189,15 @@ btn:hover {
   }
 }
 @media (max-width: 320px) {
+  .bg-img {
+    height: 70vh;
+  }
   .search {
     width: 55%;
     height: 35px;
   }
   .search-icon {
-    font-size: 19px;
+    font-size: 21px;
   }
   .social {
     font-size: 16px;
