@@ -9,6 +9,9 @@
   justify-content: space-between;
   align-items: center;
 }
+.filter-btn {
+  color: #00ffe8;
+}
 .filter-btn:hover {
   border-color: #00ffe8;
   background-color: #00ffe8;

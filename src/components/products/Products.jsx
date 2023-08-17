@@ -17,7 +17,6 @@ const Products = () => {
       const filtered = products.filter((product) =>
         product.categories.includes(activeItem)
       );
-      console.log(filtered);
       setFilterd(filtered);
     }
   }, [activeItem, products]);
