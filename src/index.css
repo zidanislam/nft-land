@@ -16,14 +16,14 @@
 .section-heading {
   margin-left: 30px;
   margin-bottom: 10px;
-  font-size: 32px;
-  font-weight: 700;
+  font: 700 32px;
 }
+
 a {
-  font-weight: 500;
-  color: grey;
+  font: 500 grey;
   text-decoration: inherit;
 }
+
 a:hover {
   color: #00ffe8;
 }
@@ -32,35 +32,42 @@ body {
   margin: 0;
   padding: 0;
 }
-/* spinner animation */
 
-/* end of spinner animation */
+.products {
+  display: grid;
+  gap: 20px;
+  padding: 30px;
+  grid-template-columns: repeat(4, 3fr);
+}
+
+@media (max-width: 1024px) {
+  .products {
+    grid-template-columns: repeat(3, 4fr);
+  }
+}
 
 button {
-  border-radius: 8px;
   border: 1px solid #00ffe8;
+  border-radius: 8px;
   color: #00ffe8;
   background-color: transparent;
   padding: 0.5em 1em;
   margin-right: 2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: transparent;
+  font: 500 1em inherit;
   cursor: pointer;
   transition: border-color 0.25s;
 }
-
-/* button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-} */
 
 @media (max-width: 425px) {
   .section-heading {
     font-size: 24px;
   }
+
+  .products {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
+
 @media (max-width: 375px) {
   .section-heading {
     font-size: 22px;

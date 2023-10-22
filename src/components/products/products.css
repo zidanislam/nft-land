@@ -1,42 +1,72 @@
-.products {
+.all-products {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 20px;
   padding: 30px;
+  grid-template-columns: repeat(5, 2fr);
 }
+
 .filter-products {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
+
 .filter-btn {
   color: #00ffe8;
+  transition: background-color 0.25s;
 }
+
 .filter-btn:hover {
   border-color: #00ffe8;
   background-color: #00ffe8;
   color: black;
-  transition: background-color 0.25s;
 }
+
 .active-filter {
   background-color: #00ffe8;
   color: black;
 }
+
+@media (max-width: 2560px) {
+  .all-products {
+    grid-template-columns: repeat(5, 2fr);
+  }
+}
+
+@media (max-width: 1440px) {
+  .all-products {
+    grid-template-columns: repeat(4, 3fr);
+  }
+}
+
+@media (max-width: 1024px) {
+  .all-products {
+    grid-template-columns: repeat(3, 4fr);
+  }
+}
+
 @media (max-width: 425px) {
   .filter-products button {
     font-size: 13px;
     margin-right: 0.5em;
     margin-top: 10px;
   }
+
   .filter-buttons {
     margin-right: 25px;
   }
+
+  .all-products {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
+
 @media (max-width: 375px) {
   .filter-products button {
     font-size: 12px;
     margin-right: 0.5em;
   }
+
   .filter-buttons {
     margin-right: 10px;
     margin-left: 10px;

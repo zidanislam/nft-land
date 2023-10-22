@@ -26,7 +26,7 @@ const Products = () => {
         <h2 className="section-heading">Explore All</h2>
         <Filter activeItem={activeItem} setActiveItem={setActiveItem} />
       </div>
-      <motion.div layout className="products">
+      <motion.div layout className="all-products">
         <AnimatePresence>
           {filtered.map((product) => (
             <Product key={product.id} product={product} />
