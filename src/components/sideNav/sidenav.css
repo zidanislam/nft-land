@@ -10,6 +10,9 @@
   top: 0;
   z-index: 11;
 }
+.no-scroll {
+  overflow: hidden;
+}
 .logo {
   width: 80%;
   padding: 10px;
@@ -25,7 +28,7 @@
   font-weight: 500;
   cursor: pointer;
   position: absolute;
-  top: 40%;
+  top: 35%;
   color: grey;
 }
 .nav-items :hover {
@@ -63,6 +66,9 @@
   .nav-bar {
     position: fixed;
     height: 100vh;
+  }
+  .nav-items {
+    top: 40%;
   }
   .mobile-menu {
     display: block;

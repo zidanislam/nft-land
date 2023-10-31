@@ -4,17 +4,29 @@ import {
   faHeartPulse,
   faHouseChimney,
   faLightbulb,
+  faUser,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import React, { useState } from "react";
 import { Link as LinkScroll } from "react-scroll";
 import logo from "../../images/logo.png";
+import LoginPopup from "../login-register/LoginPopup";
 import "./sidenav.css";
 
 const SideNav = ({ navState }) => {
+  const [popUp, setPopUp] = useState(false);
   const [selected, setSelected] = useState("");
   const { Sidenav_animation, open, setOpen } = navState;
+
+  const close = () => {
+    setPopUp(false);
+    document.body.classList.remove("no-scroll");
+  };
+  const popUpOpen = () => {
+    setPopUp(true);
+    document.body.classList.add("no-scroll");
+  };
   return (
     <>
       <motion.div
@@ -111,8 +123,21 @@ const SideNav = ({ navState }) => {
             <FontAwesomeIcon icon={faLightbulb} />
             <p>Info</p>
           </LinkScroll>
+          <motion.div
+            className="nav-item"
+            onClick={() => {
+              setOpen(false);
+              popUp ? close() : popUpOpen();
+            }}
+          >
+            <FontAwesomeIcon icon={faUser} />
+            <p>LogIn/Register</p>
+          </motion.div>
         </div>
       </motion.div>
+      <AnimatePresence initial={false} onExitComplete={() => null}>
+        {popUp && <LoginPopup popUp={popUp} handleClose={close} />}
+      </AnimatePresence>
       <div
         onClick={() => setOpen(false)}
         className={open ? "overlay show" : "overlay hide"}
