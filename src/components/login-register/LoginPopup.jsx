@@ -73,7 +73,7 @@ const LoginPopup = ({ handleClose, text }) => {
               </button>
             </div>
             <div className="signup-link">
-              Not a member? <a onClick={() => isLogin(false)}>Signup now</a>
+              Not a member? <a onClick={() => isLogin(false)}>Register now</a>
             </div>
           </form>
         ) : (
@@ -91,8 +91,8 @@ const LoginPopup = ({ handleClose, text }) => {
               <label>Confirm Password</label>
             </div>
             <div className="field button-parent">
-              <button type="submit" value="Login">
-                Login
+              <button type="submit" value="Register">
+                Register
               </button>
             </div>
             <div className="signup-link">
