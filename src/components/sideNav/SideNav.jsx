@@ -5,11 +5,13 @@ import {
   faHouseChimney,
   faLightbulb,
   faUser,
+  faUserXmark,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { AnimatePresence, motion } from "framer-motion";
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { Link as LinkScroll } from "react-scroll";
+import { AuthContext } from "../../context/AuthContext";
 import logo from "../../images/logo.png";
 import LoginPopup from "../login-register/LoginPopup";
 import "./sidenav.css";
@@ -18,6 +20,7 @@ const SideNav = ({ navState }) => {
   const [popUp, setPopUp] = useState(false);
   const [selected, setSelected] = useState("");
   const { Sidenav_animation, open, setOpen } = navState;
+  const { currentUser, logOut } = useContext(AuthContext);
 
   const close = () => {
     setPopUp(false);
@@ -123,16 +126,23 @@ const SideNav = ({ navState }) => {
             <FontAwesomeIcon icon={faLightbulb} />
             <p>Info</p>
           </LinkScroll>
-          <motion.div
-            className="nav-item"
-            onClick={() => {
-              setOpen(false);
-              popUp ? close() : popUpOpen();
-            }}
-          >
-            <FontAwesomeIcon icon={faUser} />
-            <p>LogIn/Register</p>
-          </motion.div>
+          {currentUser ? (
+            <motion.div className="nav-item" onClick={() => logOut()}>
+              <FontAwesomeIcon icon={faUserXmark} />
+              <p>LogOut</p>
+            </motion.div>
+          ) : (
+            <motion.div
+              className="nav-item"
+              onClick={() => {
+                setOpen(false);
+                popUp ? close() : popUpOpen();
+              }}
+            >
+              <FontAwesomeIcon icon={faUser} />
+              <p>LogIn/Register</p>
+            </motion.div>
+          )}
         </div>
       </motion.div>
       <AnimatePresence initial={false} onExitComplete={() => null}>

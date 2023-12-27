@@ -5,12 +5,26 @@ import {
   faPhone,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import React from "react";
+import { AnimatePresence } from "framer-motion";
+import React, { useContext, useState } from "react";
 import { Link as LinkScroll } from "react-scroll";
+import { AuthContext } from "../../context/AuthContext";
+import AddAuction from "../addAuction/AddAuction";
 import "./hero.css";
 
 const Hero = ({ navState }) => {
   const { setOpen } = navState;
+  const { currentUser } = useContext(AuthContext);
+  const [popUp, setPopUp] = useState(false);
+
+  const close = () => {
+    setPopUp(false);
+    document.body.classList.remove("no-scroll");
+  };
+  const popUpOpen = () => {
+    setPopUp(true);
+    document.body.classList.add("no-scroll");
+  };
 
   return (
     <>
@@ -25,6 +39,16 @@ const Hero = ({ navState }) => {
         </div>
 
         <div className="header-item search-bar">
+          {currentUser && (
+            <button
+              onClick={() => {
+                setOpen(false);
+                popUp ? close() : popUpOpen();
+              }}
+            >
+              Add Auction +
+            </button>
+          )}
           <input className="search" type="search" placeholder="Search..." />
           <FontAwesomeIcon
             className="search-icon"
@@ -48,6 +72,11 @@ const Hero = ({ navState }) => {
           >
             <FontAwesomeIcon className="social" size="lg" icon={faMessage} />
           </a>
+          {currentUser ? (
+            <button className="user-name" disabled>
+              Hi! {currentUser.email}
+            </button>
+          ) : null}
         </div>
       </div>
       <div className="bg-img">
@@ -66,6 +95,14 @@ const Hero = ({ navState }) => {
           <img id="seal" src="https://i.imgur.com/9YMTvk8.png" alt="" />
         </div>
       </div>
+
+      <AnimatePresence initial={false} onExitComplete={() => null}>
+        {popUp && <AddAuction popUp={popUp} handleClose={close} />}
+      </AnimatePresence>
+      <div
+        onClick={() => setOpen(false)}
+        className={open ? "overlay show" : "overlay hide"}
+      ></div>
     </>
   );
 };
